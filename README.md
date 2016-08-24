@@ -1,1 +1,2 @@
-# gpgpu-sim-bk
+# gpgpu-sim
+
