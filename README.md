@@ -17,18 +17,25 @@ make sure CUDA_INSTALL_PATH is set to the location where you installed the CUDA 
 	export PATH=$PATH:/$CUDA_INSTALL_PATH/bin
 
 ### build
-	$cd CD_TO_REPOSITORY/
+	$cd GO_TO_ROOT_REPOSITORY/
 
 	$source setup_environment
 
 	$make
 
 ### run
-	copy the contents of v3.x/configs/GTX480/ or other devices to your applications' working directory.
+	* copy the contents of v3.x/configs/GTX480/ or other devices to your applications' working directory.
+	
+	* in the configure.ocelot
+		* trace: { memoryChecker: { enabled: true, checkInitialization: false, cta: 0}}, must be defined
+		* "cta: 0" will print all traces made by CTA0
+		* "cta: 9999" will print all traces made by all the CTAs
 
 	source setup_environment
 
 	run as usual
+	
+	* memory trace will be created and written to AppName_trace.txt
 
 
 More detailed information you need can be found in README.original file.
